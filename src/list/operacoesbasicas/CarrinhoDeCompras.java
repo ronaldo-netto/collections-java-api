@@ -1,7 +1,7 @@
 /**
  * @author ronaldo neto
  */
-package list.OperacoesBasicas;
+package list.operacoesbasicas;
 
 import java.util.List;
 import java.util.ArrayList;
