@@ -1,10 +1,10 @@
 package map.operacoesbasicas;
 
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 
 public class AgendaContatos {
-
+	// atributo
 	private Map<String, Integer> agendaContatoMap;
 
 	public AgendaContatos() {
@@ -13,13 +13,13 @@ public class AgendaContatos {
 
 	public void adicionarContato(String nome, Integer telefone) {
 		agendaContatoMap.put(nome, telefone);
-
 	}
 
 	public void removerContato(String nome) {
 		if (!agendaContatoMap.isEmpty()) {
-
 			agendaContatoMap.remove(nome);
+		} else {
+			System.out.println("A agenda de contatos está vazia.");
 		}
 	}
 
@@ -27,9 +27,8 @@ public class AgendaContatos {
 		if (!agendaContatoMap.isEmpty()) {
 			System.out.println(agendaContatoMap);
 		} else {
-			System.out.println("A agenda de contato está vazia.");
+			System.out.println("A agenda de contatos está vazia.");
 		}
-
 	}
 
 	public Integer pesquisarPorNome(String nome) {
@@ -39,9 +38,8 @@ public class AgendaContatos {
 			if (numeroPorNome == null) {
 				System.out.println("Contato não encontrado na agenda.");
 			}
-
 		} else {
-			System.out.println("A agenda está vazia.");
+			System.out.println("A agenda de contatos está vazia.");
 		}
 		return numeroPorNome;
 	}
